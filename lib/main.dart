@@ -1,6 +1,7 @@
 import 'package:bookora/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const BookOra());
@@ -14,7 +15,10 @@ class BookOra extends StatelessWidget {
     return GetMaterialApp(
      debugShowCheckedModeBanner: false,
       home:SplashView(),
-        
+      theme: ThemeData().copyWith(
+        textTheme: GoogleFonts.acmeTextTheme()
+        // abhayaLibreTextTheme()
+      ),
     );
   }
 }

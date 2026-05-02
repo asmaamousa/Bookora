@@ -1,6 +1,7 @@
 
+import 'package:bookora/cores/utils/styles.dart';
 import 'package:bookora/features/home/presentation/views/widgets/custom_appbar.dart';
-import 'package:bookora/features/home/presentation/views/widgets/scrol_bar_item.dart';
+import 'package:bookora/features/home/presentation/views/widgets/featured_book_listview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,29 +10,20 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Column(
-
-      children: [
-        CustomAppBar(),
-      FeaturedBookListView()
-      ],
+    return  Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomAppBar(),
+        FeaturedBooksListView(),
+        SizedBox(height: 50,),
+        Text("Best Seller",
+        style: Styles.textMeduim,
+        )
+        ],
+      ),
     );
   }
 }
 
-class FeaturedBookListView extends StatelessWidget {
-  const FeaturedBookListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-       height: MediaQuery.of(context).size.height*0.25,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (index,context){
-      return const ScrolBarItem();
-        }
-        ),
-    );
-  }
-}
