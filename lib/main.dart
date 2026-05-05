@@ -16,9 +16,10 @@ class BookOra extends StatelessWidget {
      debugShowCheckedModeBanner: false,
       home:SplashView(),
       theme: ThemeData().copyWith(
-        textTheme: GoogleFonts.acmeTextTheme()
+        textTheme: GoogleFonts.alikeAngularTextTheme()
         // abhayaLibreTextTheme()
       ),
     );
   }
 }
+
