@@ -17,6 +17,11 @@ fontSize: 18,
 // fontFamily: kGetSectraFine,
 fontWeight: FontWeight.normal
   );
+    static  const textStyle16=TextStyle(
+fontSize: 16,
+// fontFamily: kGetSectraFine,
+fontWeight: FontWeight.normal
+  );
   static  const textStyle14=TextStyle(
 fontSize: 14,
 fontWeight: FontWeight.normal
