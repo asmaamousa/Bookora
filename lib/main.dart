@@ -1,6 +1,7 @@
+import 'package:bookora/cores/utils/app_routes.dart';
 import 'package:bookora/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -12,9 +13,10 @@ class BookOra extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig:AppRoutes.router ,
      debugShowCheckedModeBanner: false,
-      home:SplashView(),
+      // home:SplashView(),
       theme: ThemeData().copyWith(
         textTheme: GoogleFonts.alikeAngularTextTheme()
         // abhayaLibreTextTheme()
