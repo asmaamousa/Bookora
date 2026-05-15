@@ -1,3 +1,4 @@
+import 'package:bookora/cores/utils/styles.dart';
 import 'package:bookora/features/home/presentation/views/widgets/scrol_bar_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,10 @@ class BookDetailsViewBody extends StatelessWidget {
       Padding(
         padding: EdgeInsets.symmetric(horizontal: width*.11),
         child: ScrolBarItem(),
-      )
+      ),
+     SizedBox(height:30,),
+     Text("The Jungle Book",style: Styles.textStyle30,),
+       Text("The Jungle Book lll dsgtgrfg",style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic,color: Colors.grey)),
     ],
     );
   }
