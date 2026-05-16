@@ -1,8 +1,6 @@
 
-import 'package:bookora/cores/utils/assets.dart';
 import 'package:bookora/cores/utils/styles.dart';
 import 'package:bookora/features/home/presentation/views/widgets/best_seller_listview.dart';
-import 'package:bookora/features/home/presentation/views/widgets/bestseller_list_item.dart';
 import 'package:bookora/features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:bookora/features/home/presentation/views/widgets/featured_book_listview.dart';
 import 'package:flutter/cupertino.dart';
