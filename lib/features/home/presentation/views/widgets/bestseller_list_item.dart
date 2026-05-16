@@ -59,7 +59,18 @@ class BestSellerListItem extends StatelessWidget {
                       const SizedBox(height: 3),
                       const Text("asmaa mousa", style: Styles.textStyle14),
                       const SizedBox(height: 3),
-                      const BookRating()
+                      Row(children: [
+                         Text(
+                    r'$'
+                    "19.9",
+                    style: Styles.textStyle20.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 198, 45, 34)
+                    ),
+                  ),
+                  Spacer(),
+                  BookRating()
+                      ],)
                     ],
                   ),
                 ),
