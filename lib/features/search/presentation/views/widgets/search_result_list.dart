@@ -1,15 +1,15 @@
 import 'package:bookora/features/home/presentation/views/widgets/bestseller_list_item.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class BestSellerListview extends StatelessWidget {
-  const BestSellerListview({super.key});
+class SearchResultList extends StatelessWidget {
+  const SearchResultList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       // shrinkWrap: true,
     
-       physics:NeverScrollableScrollPhysics(),
+      //  physics:NeverScrollableScrollPhysics(),
        padding:EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context,index){

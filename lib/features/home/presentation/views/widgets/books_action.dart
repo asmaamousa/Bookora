@@ -1,6 +1,6 @@
 
 import 'package:bookora/constantes.dart';
-import 'package:bookora/cores/widgits/custom_button.dart';
+import 'package:bookora/cores/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class BookActions extends StatelessWidget {
