@@ -12,23 +12,19 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return CustomScrollView(
-      
-slivers: [
-   SliverFillRemaining(
-    hasScrollBody: false,
-     child: Column(
-        children: [
-          BookDetailsSection(width: width),
-        
-          SizedBox(height: 40,),
-        SimilarBooksSection()
-        ],
-      ),
-   )
- 
-],
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            children: [
+              BookDetailsSection(width: width),
+
+              SizedBox(height: 40),
+              SimilarBooksSection(),
+            ],
+          ),
+        ),
+      ],
     );
-    
- 
   }
 }

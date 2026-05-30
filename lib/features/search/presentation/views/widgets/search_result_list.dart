@@ -8,15 +8,16 @@ class SearchResultList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       // shrinkWrap: true,
-    
+
       //  physics:NeverScrollableScrollPhysics(),
-       padding:EdgeInsets.zero,
+      padding: EdgeInsets.zero,
       itemCount: 10,
-      itemBuilder: (context,index){
-      return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: BestSellerListItem(),
-      );
-    });
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: BestSellerListItem(),
+        );
+      },
+    );
   }
 }

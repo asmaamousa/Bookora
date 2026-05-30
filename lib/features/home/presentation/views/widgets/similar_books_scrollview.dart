@@ -6,14 +6,14 @@ class SimilarScrolview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return SizedBox(
-       height: MediaQuery.of(context).size.height*0.15,
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.15,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (index,context){
-      return const ScrolBarItem();
-        }
-        ),
+        itemBuilder: (index, context) {
+          return const ScrolBarItem();
+        },
+      ),
     );
   }
 }

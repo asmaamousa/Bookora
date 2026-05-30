@@ -9,14 +9,18 @@ class BookDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-            
-          leading: IconButton(onPressed: (){
-
-          GoRouter.of(context).pop();
-          }, icon: Icon(Icons.close)),
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            icon: Icon(Icons.close),
+          ),
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart_outlined))
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.shopping_cart_outlined),
+            ),
           ],
         ),
         body: Padding(

@@ -6,22 +6,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 class BestSellerListItem extends StatelessWidget {
   const BestSellerListItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRoutes.kbookDetails);
       },
       child: Card(
         // margin:EdgeInsets.all(30),
-          elevation: 5, // قوة الشادو
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
+        elevation: 5, // قوة الشادو
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SizedBox(
@@ -36,7 +33,7 @@ class BestSellerListItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                       image: const DecorationImage(
                         fit: BoxFit.fill,
-          
+
                         image: AssetImage(AssetsData.logo),
                       ),
                     ),
@@ -59,22 +56,24 @@ class BestSellerListItem extends StatelessWidget {
                       const SizedBox(height: 3),
                       const Text("asmaa mousa", style: Styles.textStyle14),
                       const SizedBox(height: 3),
-                      Row(children: [
-                         Text(
-                    r'$'
-                    "19.9",
-                    style: Styles.textStyle20.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: const Color.fromARGB(255, 198, 45, 34)
-                    ),
-                  ),
-                  Spacer(),
-                  BookRating()
-                      ],)
+                      Row(
+                        children: [
+                          Text(
+                            r'$'
+                            "19.9",
+                            style: Styles.textStyle20.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: const Color.fromARGB(255, 198, 45, 34),
+                            ),
+                          ),
+                          Spacer(),
+                          BookRating(),
+                        ],
+                      ),
                     ],
                   ),
                 ),
-          
+
                 // Column()
               ],
             ),
@@ -84,4 +83,3 @@ class BestSellerListItem extends StatelessWidget {
     );
   }
 }
-

@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
   final VoidCallback onPressed;
-  const CustomAppBar({ super.key, required this.onPressed});
+  const CustomAppBar({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

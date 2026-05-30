@@ -1,4 +1,3 @@
-
 import 'package:bookora/cores/utils/app_routes.dart';
 import 'package:bookora/cores/utils/styles.dart';
 import 'package:bookora/features/home/presentation/views/widgets/best_seller_listview.dart';
@@ -13,43 +12,42 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    CustomScrollView(
+    return CustomScrollView(
       slivers: [
-SliverToBoxAdapter(
-  child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CustomAppBar(
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRoutes.kSearchView);
+                  },
+                ),
+              ),
+              FeaturedBooksListView(),
+              SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Text(
+                  "Best Seller",
+                  style: Styles.textStyle20.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+        ),
+        SliverFillRemaining(
+          child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: CustomAppBar(onPressed: () {
-              GoRouter.of(context).push(AppRoutes.kSearchView);
-            },),
-          ),
-        FeaturedBooksListView(),
-        SizedBox(height: 50,),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Text("Best Seller",
-          style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
+            child: BestSellerListview(),
           ),
         ),
-        SizedBox(
-          height: 10,
-        ),
-           
-        ],
-      ),
-),
-SliverFillRemaining(
-child: Padding(
- padding: const EdgeInsets.symmetric(horizontal: 20),
-  child: BestSellerListview(),
-),
-)
       ],
     );
-
   }
 }
-

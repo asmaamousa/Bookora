@@ -5,10 +5,7 @@ import 'package:bookora/features/home/presentation/views/widgets/scrol_bar_item.
 import 'package:flutter/material.dart';
 
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({
-    super.key,
-    required this.width,
-  });
+  const BookDetailsSection({super.key, required this.width});
 
   final double width;
 
@@ -32,11 +29,9 @@ class BookDetailsSection extends StatelessWidget {
         ),
         SizedBox(height: 8),
         BookRating(),
-        SizedBox(height: 25,),
-          BookActions(),
+        SizedBox(height: 25),
+        BookActions(),
       ],
     );
   }
 }
- 
- 
